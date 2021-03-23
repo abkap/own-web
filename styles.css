@@ -2,6 +2,16 @@
     padding: 0;
     margin: 0;
     margin-top: 0.3rem;
+    box-sizing: border-box;
+}
+.burger{
+    width: 2rem;
+    height: 0.3rem;
+    background: black;
+    
+}
+.burgers{
+    display: none;
 }
 
 body{
@@ -63,7 +73,8 @@ h3{
 
 .inside-button{
     border-radius: 1rem;
-    width:15%;
+    width: 15%;
+    min-width: 7rem;
     height: 10vh;
     display: flex;
     align-items: center;
@@ -113,4 +124,33 @@ h1,h2,h3{
     100%{
         transform: translateY(30%);
     }
+}
+
+@media (max-width:550px){
+  ul{
+      display: none;
+  }
+  .burgers{
+      z-index: 2;
+      display:block;
+  }
+
+}
+
+.ul-active{
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    min-width: 100%;
+    min-height: 100vh;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin-top: 0px;
+    background:#7BB4F8;
+
 }
