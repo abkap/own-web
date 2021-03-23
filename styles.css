@@ -11,6 +11,7 @@
     
 }
 .burgers{
+    cursor: pointer;
     display: none;
 }
 
@@ -129,6 +130,7 @@ h1,h2,h3{
 @media (max-width:550px){
   ul{
       display: none;
+      
   }
   .burgers{
       z-index: 2;
@@ -145,12 +147,52 @@ h1,h2,h3{
     justify-content: space-around;
     position: absolute;
     min-width: 100%;
-    min-height: 100vh;
-    top: 0px;
+    min-height: 110vh;
+    
+    /* top: 0px;
     left: 0px;
     right: 0px;
-    bottom: 0px;
+    bottom: 0px; */
     margin-top: 0px;
     background:#7BB4F8;
+    /* animation: comeSlowly 1s ease-in-out; */
+    
+}
+.comeSlowly{
+    animation: comeSlowly 0.5s ease-out;
+    animation-fill-mode: forwards;
+}
+.goSlowly{
+    animation: goSlowly 0.5s ease-out;
+    animation-fill-mode: forwards;
+    
+}
+@keyframes comeSlowly{
+    0%{
+        top: 0px;
+        left: 100vw;
+        right: -100vw;
+        bottom: 0px;
+    } 100%{
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+    }
 
+}
+
+@keyframes goSlowly{
+    0%{
+       
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+    } 100%{
+         top: 0px;
+        left: 100vw;
+        right: -100vw;
+        bottom: 0px;
+    }
 }

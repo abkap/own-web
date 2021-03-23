@@ -2,6 +2,9 @@ const contact = document.querySelector(".contact");
 const ul = document.querySelector("ul");
 const body = document.querySelector("body");
 const main = document.querySelector("main");
+const ul_active = document.querySelector(".ul-active");
+var isOpen = false;
+var count = 0;
 
 
 const lucky = document.querySelector(".inside-button");
@@ -20,9 +23,23 @@ contact.addEventListener("click" ,() => {
 lucky.addEventListener("click", ()=>{
     console.log("got");
 });
-burgers.addEventListener("click",()=>{
-    
+function doThis(){
     ul.classList.toggle("ul-active");
     contact.classList.toggle("contact");
-    
-});
+    // ul.classList.add("comeSlowly");
+    if(isOpen){
+        ul.classList.remove("comeSlowly");
+        ul.classList.add("goSlowly");
+        isOpen = false;
+
+    } else{
+        ul.classList.remove("goSlowly");
+        ul.classList.add("comeSlowly");
+        isOpen = true;
+    }
+}
+burgers.addEventListener("click",doThis);
+
+
+
+
