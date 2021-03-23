@@ -4,10 +4,11 @@
     margin-top: 0.3rem;
     box-sizing: border-box;
 }
+
 .burger{
     width: 2rem;
     height: 0.3rem;
-    background: black;
+    background: grey;
     
 }
 .burgers{
